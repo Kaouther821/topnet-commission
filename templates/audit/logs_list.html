@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Logs{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- Titre -->
+    <div class="mb-4">
+        <h2 class="fw-bold">Journal des activités</h2>
+        <p class="text-muted">Historique des actions utilisateurs</p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="card p-3 shadow-sm mb-4">
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Utilisateur...">
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Action</option>
+                    <option>Connexion</option>
+                    <option>Modification</option>
+                    <option>Import</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <input type="date" class="form-control">
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100">Filtrer</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tableau -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Logs</h5>
+        </div>
+
+        <div class="card-body text-center text-muted">
+            Aucun log disponible
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

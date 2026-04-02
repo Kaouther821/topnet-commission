@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- Titre -->
+    <div class="mb-4">
+        <h2 class="fw-bold">Tableau de bord</h2>
+        <p class="text-muted">Aucune donnée disponible pour le moment</p>
+    </div>
+
+    <!-- Cartes vides -->
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3 text-center">
+                <h6 class="text-muted">Commissions totales</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3 text-center">
+                <h6 class="text-muted">Revendeurs actifs</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3 text-center">
+                <h6 class="text-muted">Commissions en attente</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Boutons -->
+    <div class="mb-4 d-flex gap-2 flex-wrap">
+        <a href="#" class="btn btn-primary">Nouvelle commission</a>
+        <a href="#" class="btn btn-outline-primary">Importer CSV</a>
+        <a href="#" class="btn btn-outline-dark">Voir les logs</a>
+    </div>
+
+    <!-- Tableau vide -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Commissions</h5>
+        </div>
+        <div class="card-body text-center text-muted">
+            Aucune commission disponible
+        </div>
+    </div>
+
+    <!-- Activités vides -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Activités</h5>
+        </div>
+        <div class="card-body text-center text-muted">
+            Aucune activité récente
+        </div>
+    </div>
+
+</div>
+{% endblock %}
