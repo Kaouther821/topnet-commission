@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des règles{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- Titre -->
+    <div class="mb-4">
+        <h2 class="fw-bold">Liste des règles</h2>
+        <p class="text-muted">Consultation et gestion des règles de commission</p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="card p-3 shadow-sm mb-4">
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Rechercher une règle...">
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Type de règle</option>
+                    <option>Commission mensuelle</option>
+                    <option>Commission trimestrielle</option>
+                    <option>Bonus exceptionnel</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Statut</option>
+                    <option>Actif</option>
+                    <option>Inactif</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100">Filtrer</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tableau -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Règles disponibles</h5>
+            <a href="#" class="btn btn-success btn-sm">+ Nouvelle règle</a>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Zone</th>
+                            <th>Type revendeur</th>
+                            <th>Statut</th>
+                            <th>Date début</th>
+                            <th>Date fin</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-4">
+                                Aucune règle disponible
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

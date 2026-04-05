@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard Admin Vente{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="mb-4">
+        <h2 class="fw-bold">Dashboard Admin Vente</h2>
+        <p class="text-muted">Gestion des règles, paliers et configurations de commission</p>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3">
+                <h6 class="text-muted">Règles actives</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3">
+                <h6 class="text-muted">Paliers configurés</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3">
+                <h6 class="text-muted">Modifications récentes</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4 d-flex gap-2 flex-wrap">
+        <a href="/rules/form/" class="btn btn-primary">Nouvelle règle</a>
+        <a href="/rules/list/" class="btn btn-outline-primary">Voir les règles</a>
+        <a href="/rules/history/" class="btn btn-outline-dark">Historique</a>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Règles configurées</h5>
+        </div>
+        <div class="card-body text-center text-muted">
+            Aucune règle disponible
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Historique des modifications</h5>
+        </div>
+        <div class="card-body text-center text-muted">
+            Aucun historique disponible
+        </div>
+    </div>
+</div>
+{% endblock %}

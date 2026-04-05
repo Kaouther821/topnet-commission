@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}Historique des règles{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Historique des règles</h2>
+        <p class="text-muted">Consultation des modifications et actions effectuées sur les règles</p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="card p-3 shadow-sm mb-4">
+        <div class="row g-3">
+
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Utilisateur...">
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Action</option>
+                    <option>Création</option>
+                    <option>Modification</option>
+                    <option>Activation</option>
+                    <option>Désactivation</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <input type="date" class="form-control">
+            </div>
+
+            <div class="col-md-3">
+                <button class="btn btn-primary w-100">Filtrer</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tableau -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Historique</h5>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Date</th>
+                            <th>Utilisateur</th>
+                            <th>Règle</th>
+                            <th>Action</th>
+                            <th>Détail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">
+                                Aucun historique disponible
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block title %}Configuration de règle{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Configuration d'une règle</h2>
+        <p class="text-muted">Créer ou modifier une règle de commission</p>
+    </div>
+
+    <div class="card shadow-sm border-0 p-4">
+        <form>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nom de la règle</label>
+                    <input type="text" class="form-control" placeholder="Ex: Règle commission fibre">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Type de règle</label>
+                    <select class="form-select">
+                        <option selected disabled>Choisir un type</option>
+                        <option>Commission mensuelle</option>
+                        <option>Commission trimestrielle</option>
+                        <option>Bonus exceptionnel</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Date de début</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Date de fin</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Zone</label>
+                    <select class="form-select">
+                        <option selected disabled>Choisir une zone</option>
+                        <option>Nord</option>
+                        <option>Centre</option>
+                        <option>Sud</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Type de revendeur</label>
+                    <select class="form-select">
+                        <option selected disabled>Choisir un type</option>
+                        <option>Revendeur standard</option>
+                        <option>Revendeur premium</option>
+                        <option>Partenaire</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Ratio minimal d’activation</label>
+                    <input type="number" class="form-control" placeholder="Ex: 70">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Statut</label>
+                    <select class="form-select">
+                        <option>Actif</option>
+                        <option>Inactif</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" rows="4" placeholder="Ajouter une description de la règle..."></textarea>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Paliers</h5>
+                <button type="button" class="btn btn-outline-primary btn-sm">+ Ajouter un palier</button>
+            </div>
+
+            <div class="card border-0 bg-light p-3 mb-3">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Valeur min</label>
+                        <input type="number" class="form-control" placeholder="0">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Valeur max</label>
+                        <input type="number" class="form-control" placeholder="100">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Commission</label>
+                        <input type="number" class="form-control" placeholder="50">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 bg-light p-3 mb-3">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Valeur min</label>
+                        <input type="number" class="form-control" placeholder="101">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Valeur max</label>
+                        <input type="number" class="form-control" placeholder="200">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Commission</label>
+                        <input type="number" class="form-control" placeholder="100">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                <button type="reset" class="btn btn-outline-secondary">Annuler</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

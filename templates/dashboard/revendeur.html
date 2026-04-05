@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard Revendeur{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="mb-4">
+        <h2 class="fw-bold">Dashboard Revendeur</h2>
+        <p class="text-muted">Suivi personnel des commissions et performances</p>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3">
+                <h6 class="text-muted">Mes commissions</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3">
+                <h6 class="text-muted">Mon ratio</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 p-3">
+                <h6 class="text-muted">Mes validations</h6>
+                <h3 class="text-muted">--</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4 d-flex gap-2 flex-wrap">
+        <a href="#" class="btn btn-primary">Voir mes commissions</a>
+        <a href="#" class="btn btn-outline-primary">Historique personnel</a>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Mes commissions récentes</h5>
+        </div>
+        <div class="card-body text-center text-muted">
+            Aucune commission disponible
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+            <h5 class="mb-0">Mon activité</h5>
+        </div>
+        <div class="card-body text-center text-muted">
+            Aucune activité récente
+        </div>
+    </div>
+</div>
+{% endblock %}
